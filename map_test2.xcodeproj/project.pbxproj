@@ -13,6 +13,7 @@
 		F48D0AC5194A2F7E001F1EDF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F48D0AC4194A2F7E001F1EDF /* Images.xcassets */; };
 		F48D0AD1194A2F7E001F1EDF /* map_test2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48D0AD0194A2F7E001F1EDF /* map_test2Tests.swift */; };
 		F48D0ADB194A2FA6001F1EDF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48D0ADA194A2FA6001F1EDF /* MapKit.framework */; };
+		F48D0B64194A78B9001F1EDF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48D0B63194A78B9001F1EDF /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		F48D0ACF194A2F7E001F1EDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F48D0AD0194A2F7E001F1EDF /* map_test2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = map_test2Tests.swift; sourceTree = "<group>"; };
 		F48D0ADA194A2FA6001F1EDF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F48D0B63194A78B9001F1EDF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F48D0B64194A78B9001F1EDF /* CoreLocation.framework in Frameworks */,
 				F48D0ADB194A2FA6001F1EDF /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,6 +63,7 @@
 		F48D0AAF194A2F7E001F1EDF = {
 			isa = PBXGroup;
 			children = (
+				F48D0B63194A78B9001F1EDF /* CoreLocation.framework */,
 				F48D0ADA194A2FA6001F1EDF /* MapKit.framework */,
 				F48D0ABA194A2F7E001F1EDF /* map_test2 */,
 				F48D0ACD194A2F7E001F1EDF /* map_test2Tests */,
@@ -403,6 +407,7 @@
 				F48D0AD6194A2F7E001F1EDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F48D0AD7194A2F7E001F1EDF /* Build configuration list for PBXNativeTarget "map_test2Tests" */ = {
 			isa = XCConfigurationList;
@@ -411,6 +416,7 @@
 				F48D0AD9194A2F7E001F1EDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
