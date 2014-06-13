@@ -28,13 +28,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F48D0AB8194A2F7E001F1EDF /* map_test2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = map_test2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F48D0AB8194A2F7E001F1EDF /* bike-1-1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bike-1-1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F48D0ABC194A2F7E001F1EDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F48D0ABD194A2F7E001F1EDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F48D0ABF194A2F7E001F1EDF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F48D0AC2194A2F7E001F1EDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F48D0AC4194A2F7E001F1EDF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		F48D0ACA194A2F7E001F1EDF /* map_test2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = map_test2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F48D0ACA194A2F7E001F1EDF /* bike-1-1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "bike-1-1Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F48D0ACF194A2F7E001F1EDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F48D0AD0194A2F7E001F1EDF /* map_test2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = map_test2Tests.swift; sourceTree = "<group>"; };
 		F48D0ADA194A2FA6001F1EDF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -68,8 +68,8 @@
 				F48D0B65194B3AF7001F1EDF /* dbc.gpx */,
 				F48D0B63194A78B9001F1EDF /* CoreLocation.framework */,
 				F48D0ADA194A2FA6001F1EDF /* MapKit.framework */,
-				F48D0ABA194A2F7E001F1EDF /* map_test2 */,
-				F48D0ACD194A2F7E001F1EDF /* map_test2Tests */,
+				F48D0ABA194A2F7E001F1EDF /* bike-1-1 */,
+				F48D0ACD194A2F7E001F1EDF /* bike-1-1Tests */,
 				F48D0AB9194A2F7E001F1EDF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,13 +77,13 @@
 		F48D0AB9194A2F7E001F1EDF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F48D0AB8194A2F7E001F1EDF /* map_test2.app */,
-				F48D0ACA194A2F7E001F1EDF /* map_test2Tests.xctest */,
+				F48D0AB8194A2F7E001F1EDF /* bike-1-1.app */,
+				F48D0ACA194A2F7E001F1EDF /* bike-1-1Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F48D0ABA194A2F7E001F1EDF /* map_test2 */ = {
+		F48D0ABA194A2F7E001F1EDF /* bike-1-1 */ = {
 			isa = PBXGroup;
 			children = (
 				F48D0ABD194A2F7E001F1EDF /* AppDelegate.swift */,
@@ -92,6 +92,7 @@
 				F48D0AC4194A2F7E001F1EDF /* Images.xcassets */,
 				F48D0ABB194A2F7E001F1EDF /* Supporting Files */,
 			);
+			name = "bike-1-1";
 			path = map_test2;
 			sourceTree = "<group>";
 		};
@@ -103,12 +104,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F48D0ACD194A2F7E001F1EDF /* map_test2Tests */ = {
+		F48D0ACD194A2F7E001F1EDF /* bike-1-1Tests */ = {
 			isa = PBXGroup;
 			children = (
 				F48D0AD0194A2F7E001F1EDF /* map_test2Tests.swift */,
 				F48D0ACE194A2F7E001F1EDF /* Supporting Files */,
 			);
+			name = "bike-1-1Tests";
 			path = map_test2Tests;
 			sourceTree = "<group>";
 		};
@@ -123,9 +125,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F48D0AB7194A2F7E001F1EDF /* map_test2 */ = {
+		F48D0AB7194A2F7E001F1EDF /* bike-1-1 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F48D0AD4194A2F7E001F1EDF /* Build configuration list for PBXNativeTarget "map_test2" */;
+			buildConfigurationList = F48D0AD4194A2F7E001F1EDF /* Build configuration list for PBXNativeTarget "bike-1-1" */;
 			buildPhases = (
 				F48D0AB4194A2F7E001F1EDF /* Sources */,
 				F48D0AB5194A2F7E001F1EDF /* Frameworks */,
@@ -135,14 +137,14 @@
 			);
 			dependencies = (
 			);
-			name = map_test2;
+			name = "bike-1-1";
 			productName = map_test2;
-			productReference = F48D0AB8194A2F7E001F1EDF /* map_test2.app */;
+			productReference = F48D0AB8194A2F7E001F1EDF /* bike-1-1.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F48D0AC9194A2F7E001F1EDF /* map_test2Tests */ = {
+		F48D0AC9194A2F7E001F1EDF /* bike-1-1Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F48D0AD7194A2F7E001F1EDF /* Build configuration list for PBXNativeTarget "map_test2Tests" */;
+			buildConfigurationList = F48D0AD7194A2F7E001F1EDF /* Build configuration list for PBXNativeTarget "bike-1-1Tests" */;
 			buildPhases = (
 				F48D0AC6194A2F7E001F1EDF /* Sources */,
 				F48D0AC7194A2F7E001F1EDF /* Frameworks */,
@@ -153,9 +155,9 @@
 			dependencies = (
 				F48D0ACC194A2F7E001F1EDF /* PBXTargetDependency */,
 			);
-			name = map_test2Tests;
+			name = "bike-1-1Tests";
 			productName = map_test2Tests;
-			productReference = F48D0ACA194A2F7E001F1EDF /* map_test2Tests.xctest */;
+			productReference = F48D0ACA194A2F7E001F1EDF /* bike-1-1Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -176,7 +178,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F48D0AB3194A2F7E001F1EDF /* Build configuration list for PBXProject "map_test2" */;
+			buildConfigurationList = F48D0AB3194A2F7E001F1EDF /* Build configuration list for PBXProject "bike-1-1" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -189,8 +191,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F48D0AB7194A2F7E001F1EDF /* map_test2 */,
-				F48D0AC9194A2F7E001F1EDF /* map_test2Tests */,
+				F48D0AB7194A2F7E001F1EDF /* bike-1-1 */,
+				F48D0AC9194A2F7E001F1EDF /* bike-1-1Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -238,7 +240,7 @@
 /* Begin PBXTargetDependency section */
 		F48D0ACC194A2F7E001F1EDF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F48D0AB7194A2F7E001F1EDF /* map_test2 */;
+			target = F48D0AB7194A2F7E001F1EDF /* bike-1-1 */;
 			targetProxy = F48D0ACB194A2F7E001F1EDF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -341,7 +343,7 @@
 				INFOPLIST_FILE = map_test2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "bike-1-1";
 			};
 			name = Debug;
 		};
@@ -354,7 +356,7 @@
 				INFOPLIST_FILE = map_test2/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "bike-1-1";
 			};
 			name = Release;
 		};
@@ -373,7 +375,7 @@
 				INFOPLIST_FILE = map_test2Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "bike-1-1Tests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Debug;
@@ -389,7 +391,7 @@
 				INFOPLIST_FILE = map_test2Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "bike-1-1Tests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;
@@ -397,7 +399,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F48D0AB3194A2F7E001F1EDF /* Build configuration list for PBXProject "map_test2" */ = {
+		F48D0AB3194A2F7E001F1EDF /* Build configuration list for PBXProject "bike-1-1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F48D0AD2194A2F7E001F1EDF /* Debug */,
@@ -406,7 +408,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F48D0AD4194A2F7E001F1EDF /* Build configuration list for PBXNativeTarget "map_test2" */ = {
+		F48D0AD4194A2F7E001F1EDF /* Build configuration list for PBXNativeTarget "bike-1-1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F48D0AD5194A2F7E001F1EDF /* Debug */,
@@ -415,7 +417,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F48D0AD7194A2F7E001F1EDF /* Build configuration list for PBXNativeTarget "map_test2Tests" */ = {
+		F48D0AD7194A2F7E001F1EDF /* Build configuration list for PBXNativeTarget "bike-1-1Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F48D0AD8194A2F7E001F1EDF /* Debug */,
