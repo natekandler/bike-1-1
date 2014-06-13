@@ -48,15 +48,19 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
     }
     
-    func locationManager(manager:CLLocationManager, didUpdateLocations locations:AnyObject[]) {
+    func locationManager(manager:CLLocationManager!, didUpdateLocations locations:AnyObject[]) {
         println(locations[0].coordinate.longitude)
         println(locations[0].coordinate.latitude)
+        
+//        theMapView.scrollEnabled = true
+//        theMapView.zoomEnabled = true
+    
         
         var user_long = locations[0].coordinate.longitude
         var user_lat = locations[0].coordinate.latitude
         
-        var latDelta:CLLocationDegrees = 0.01
-        var longDelta:CLLocationDegrees = 0.01
+        var latDelta:CLLocationDegrees = 0.05
+        var longDelta:CLLocationDegrees = 0.05
         
         var theSpan:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
         
@@ -66,8 +70,19 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         
         self.theMapView.setRegion(theRegion, animated: true)
         
+        var user_location_annotation = MKPointAnnotation()
+        
+        user_location_annotation.coordinate = user_location
+        user_location_annotation.title = "You are here"
+        user_location_annotation.subtitle = "For real not hardcoded."
+        
+        self.theMapView.addAnnotation(user_location_annotation)
         
         
+        
+    }
+    
+    func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
     }
 
     override func didReceiveMemoryWarning() {
