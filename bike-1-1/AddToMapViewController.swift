@@ -7,13 +7,30 @@
 //
 
 import UIKit
+import CoreLocation
 
-
-class AddToMapViewController: UIViewController {
+class AddToMapViewController: UIViewController, CLLocationManagerDelegate {
+    var latitude = 0.000
+    var longitude = 0.000
+    
+    func get_latitude(user_latitude : Double){
+        let latitude = user_latitude
+        println(latitude)
+        println("! \(user_latitude)")
+    }
+    
+    func get_longitude(user_longitude : Double){
+        longitude = user_longitude
+    }
+   
 
     @IBOutlet var descriptionField : UITextField
-
+    let locationManager = CLLocationManager()
     @IBAction func doneButton(sender : AnyObject) {
+        
+        println(longitude)
+        println(latitude)
+        
 //        var dataString = "{test}"
         
 //        var jsonData = dataString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
@@ -35,14 +52,41 @@ class AddToMapViewController: UIViewController {
 //        println("jsonData \(jsonData)")
 //        println("json \(json)")
         
+        
+        var url = NSURL(string:"http://localhost:3000/events/")
+        var request = NSMutableURLRequest(URL: url)
+        
+        let string = NSString(format: "required_text=\(descriptionField)&latitude=42.4654634&longitude=105.342")
+        let data = string.dataUsingEncoding(NSUTF8StringEncoding)
+        
+        request.HTTPMethod = "POST"
+        request.HTTPBody = data
+        
+        var connection = NSURLConnection(request: request, delegate: self, startImmediately: false)
+        
+        println("sending request...")
+        
+        connection.start()
+        
+        
     }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
+        locationManager.startUpdatingLocation()
+        
+        
 
         // Do any additional setup after loading the view.
     }
     
-    let map = MapViewController()
+   
     
     
 

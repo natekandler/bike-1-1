@@ -30,8 +30,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     
     func locationManager(manager:CLLocationManager!, didUpdateLocations locations:AnyObject[]){
-        println(locations[0].coordinate.latitude)
-        println(locations[0].coordinate.longitude)
+//        println(locations[0].coordinate.latitude)
+//        println(locations[0].coordinate.longitude)
+        
+        
+        var addMapView = AddToMapViewController()
+        addMapView.get_latitude(locations[0].coordinate.latitude)
+        addMapView.get_longitude(locations[0].coordinate.longitude)
         
         mapView.scrollEnabled = true
         mapView.zoomEnabled = true
@@ -47,6 +52,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         var region:MKCoordinateRegion = MKCoordinateRegionMake(user_location, span)
         
         self.mapView.setRegion(region, animated: true)
+    
         
         var user_location_annotation = MKPointAnnotation()
         
