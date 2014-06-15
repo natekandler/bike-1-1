@@ -69,6 +69,7 @@
                         <viewControllerLayoutGuide type="bottom" id="OsM-Nr-8BG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="CKL-8y-nc3">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Describe your situation.." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aqr-d3-dyC">
