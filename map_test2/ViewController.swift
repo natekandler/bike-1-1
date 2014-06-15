@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 import MapKit
 import CoreLocation
 
@@ -18,33 +19,12 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
 
-//        var latitude:CLLocationDegrees  = 41.889883
-//        var longitude:CLLocationDegrees = -87.637614
-//        
-//        var latDelta:CLLocationDegrees = 0.01
-//        var longDelta:CLLocationDegrees = 0.01
-//        
-//        var theSpan:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
-//        
-//        var dbc:CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
-//        
-//        var theRegion:MKCoordinateRegion = MKCoordinateRegionMake(dbc, theSpan)
-//
-//        self.theMapView.setRegion(theRegion, animated: true)
-//        
-//        var dbcAnnotation = MKPointAnnotation()
-//        
-//        dbcAnnotation.coordinate = dbc
-//        
-//        dbcAnnotation.title = "You are here"
-//        dbcAnnotation.subtitle = "Just kidding this is hardcoded."
-//        
-//        self.theMapView.addAnnotation(dbcAnnotation)
     
     }
     
@@ -52,15 +32,15 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         println(locations[0].coordinate.longitude)
         println(locations[0].coordinate.latitude)
         
-//        theMapView.scrollEnabled = true
-//        theMapView.zoomEnabled = true
+        theMapView.scrollEnabled = true
+        theMapView.zoomEnabled = true
     
         
         var user_long = locations[0].coordinate.longitude
         var user_lat = locations[0].coordinate.latitude
         
-        var latDelta:CLLocationDegrees = 0.05
-        var longDelta:CLLocationDegrees = 0.05
+        var latDelta:CLLocationDegrees = 0.3
+        var longDelta:CLLocationDegrees = 0.3
         
         var theSpan:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
         
@@ -74,7 +54,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         
         user_location_annotation.coordinate = user_location
         user_location_annotation.title = "You are here"
-        user_location_annotation.subtitle = "For real not hardcoded."
+//        user_location_annotation.subtitle = ""
         
         self.theMapView.addAnnotation(user_location_annotation)
         
