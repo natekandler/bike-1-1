@@ -13,6 +13,8 @@ class AddToMapViewController: UIViewController, CLLocationManagerDelegate {
     var latitude = 0.000
     var longitude = 0.000
     
+    
+    
     func get_latitude(user_latitude : Double){
         let latitude = user_latitude
         println(latitude)
@@ -27,7 +29,7 @@ class AddToMapViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var descriptionField : UITextField
     let locationManager = CLLocationManager()
     @IBAction func doneButton(sender : AnyObject) {
-        
+        println("new lat and long")
         println(longitude)
         println(latitude)
         

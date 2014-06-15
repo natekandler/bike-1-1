@@ -29,6 +29,39 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
     }
     
+    @lazy var data = NSMutableData()
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        startConnection()
+    }
+    
+    
+    func startConnection(){
+        let urlPath: String = "http://www.bike-1-1.com/phones.json"
+        var url: NSURL = NSURL(string: urlPath)
+        var request: NSURLRequest = NSURLRequest(URL: url)
+        var connection: NSURLConnection = NSURLConnection(request: request, delegate: self, startImmediately: false)
+        connection.start()
+    }
+    
+    func connection(connection: NSURLConnection!, didReceiveData data: NSData!){
+        self.data.appendData(data)
+    }
+    
+    //        func btnLoad_Click(sender: UIButton){
+    //            startConnection()
+    //        }
+    
+    func connectionDidFinishLoading(connection: NSURLConnection!) {
+        var err: NSError
+        // throwing an error on the line below (can't figure out where the error message is)
+        var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
+        println("json results")
+        println(jsonResult)
+    }
+    
+    
     func locationManager(manager:CLLocationManager!, didUpdateLocations locations:AnyObject[]){
 //        println(locations[0].coordinate.latitude)
 //        println(locations[0].coordinate.longitude)
