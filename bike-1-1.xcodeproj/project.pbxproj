@@ -16,6 +16,7 @@
 		096A6A46194D09880091860D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096A6A45194D09880091860D /* MapKit.framework */; };
 		096A6A48194D098E0091860D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096A6A47194D098E0091860D /* CoreLocation.framework */; };
 		096A6A4A194D12370091860D /* dbc.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 096A6A49194D12370091860D /* dbc.gpx */; };
+		C6524C00194F7B3800D5F8F8 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6524BFF194F7B3800D5F8F8 /* LogInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		096A6A45194D09880091860D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		096A6A47194D098E0091860D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		096A6A49194D12370091860D /* dbc.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dbc.gpx; sourceTree = "<group>"; };
+		C6524BFF194F7B3800D5F8F8 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				096A6A26194D059F0091860D /* AppDelegate.swift */,
 				096A6A28194D059F0091860D /* MapViewController.swift */,
 				096A6A2A194D059F0091860D /* Main.storyboard */,
+				C6524BFF194F7B3800D5F8F8 /* LogInViewController.swift */,
 				096A6A43194D065B0091860D /* AddToMapViewController.swift */,
 				096A6A2D194D059F0091860D /* Images.xcassets */,
 				096A6A24194D059F0091860D /* Supporting Files */,
@@ -224,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6524C00194F7B3800D5F8F8 /* LogInViewController.swift in Sources */,
 				096A6A44194D065B0091860D /* AddToMapViewController.swift in Sources */,
 				096A6A29194D059F0091860D /* MapViewController.swift in Sources */,
 				096A6A27194D059F0091860D /* AppDelegate.swift in Sources */,
