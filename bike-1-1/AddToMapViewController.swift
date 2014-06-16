@@ -10,50 +10,12 @@ import UIKit
 import CoreLocation
 
 class AddToMapViewController: UIViewController, CLLocationManagerDelegate {
-    var latitude = 0.000
-    var longitude = 0.000
     
-    
-    
-    func get_latitude(user_latitude : Double){
-        let latitude = user_latitude
-    }
-    
-    func get_longitude(user_longitude : Double){
-        longitude = user_longitude
-    }
-   
+
 
     @IBOutlet var descriptionField : UITextField
     let locationManager = CLLocationManager()
     @IBAction func doneButton(sender : AnyObject) {
-        println(longitude)
-        println(latitude)
-        
-        func get_longitude(user_longitude : Double){
-            longitude = user_longitude
-        }
-        
-//        var dataString = "{test}"
-        
-//        var jsonData = dataString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
-//        
-//        var json: AnyObject! = NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions.MutableContainers, error: nil)
-//        
-        
-//        var urlPath = "http://www.bike-1-1.com/phones"
-//        var url = NSURL(string: urlPath)
-//        var request = NSMutableURLRequest(URL: url)
-//        request.HTTPMethod = "POST"
-//        
-//        request.HTTPBody = jsonData
-//        var connection = NSURLConnection(request: request, delegate: self, startImmediately: false)
-//        
-//        
-//        
-//        connection.start()
-//        println("jsonData \(jsonData)")
-//        println("json \(json)")
         
         
         var url = NSURL(string:"http://localhost:3000/events/")
@@ -72,7 +34,6 @@ class AddToMapViewController: UIViewController, CLLocationManagerDelegate {
         connection.start()
         
     }
-    
     
     
     
