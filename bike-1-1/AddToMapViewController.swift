@@ -13,10 +13,10 @@ class AddToMapViewController: UIViewController, CLLocationManagerDelegate {
     var latitude = 0.000
     var longitude = 0.000
     
+    
+    
     func get_latitude(user_latitude : Double){
         let latitude = user_latitude
-        println(latitude)
-        println("! \(user_latitude)")
     }
     
     func get_longitude(user_longitude : Double){
@@ -27,9 +27,12 @@ class AddToMapViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var descriptionField : UITextField
     let locationManager = CLLocationManager()
     @IBAction func doneButton(sender : AnyObject) {
-        
         println(longitude)
         println(latitude)
+        
+        func get_longitude(user_longitude : Double){
+            longitude = user_longitude
+        }
         
 //        var dataString = "{test}"
         
@@ -68,8 +71,8 @@ class AddToMapViewController: UIViewController, CLLocationManagerDelegate {
         
         connection.start()
         
-        
     }
+    
     
     
     
