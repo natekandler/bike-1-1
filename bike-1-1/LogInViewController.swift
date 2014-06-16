@@ -10,6 +10,7 @@ import UIKit
 
 class LogInViewController: UIViewController {
 
+    @IBOutlet var loginLabel : UILabel
     
     @IBOutlet var emailField : UITextField
     
@@ -17,10 +18,16 @@ class LogInViewController: UIViewController {
     
     @IBAction func loginButton(sender : AnyObject) {
         if emailField.text == "natekandler@gmail.com" && passwordField.text == "password" {
-        
+            self.performSegueWithIdentifier("push", sender: self)
         }
         
         else {
+            override func prepareForSegue(segue: LogInViewController, sender: AnyObject) {}
+            
+            loginLabel.text = "email or password is incorrect"
+            loginLabel.textColor = UIColor.redColor()
+            emailField.resignFirstResponder()
+            passwordField.resignFirstResponder()
         
         }
         
