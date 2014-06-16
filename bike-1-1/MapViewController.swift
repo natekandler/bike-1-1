@@ -17,7 +17,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     @IBOutlet var mapView : MKMapView
     let locationManager = CLLocationManager()
-    
+    var count = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,40 +26,44 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
+    
         
     }
     
-    @lazy var data = NSMutableData()
+//    @lazy var data = NSMutableData()
+//    
+//    override func viewWillAppear(animated: Bool) {
+//        super.viewWillAppear(animated)
+//        startConnection()
+//    }
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        startConnection()
-    }
+    
+//    func startConnection(){
+//        let urlPath: String = "http://www.bike-1-1.com/phones.json"
+//        var url: NSURL = NSURL(string: urlPath)
+//        var request: NSURLRequest = NSURLRequest(URL: url)
+//        var connection: NSURLConnection = NSURLConnection(request: request, delegate: self, startImmediately: false)
+//        connection.start()
+//    }
+//    
+//    func connection(connection: NSURLConnection!, didReceiveData data: NSData!){
+//        self.data.appendData(data)
+//        
+//    }
+//    
+//    //        func btnLoad_Click(sender: UIButton){
+//    //            startConnection()
+//    //        }
+//    
+//    func connectionDidFinishLoading(connection: NSURLConnection!) {
+//        var err: NSError
+//        
+//        var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
+//        println("json results")
+//        println(jsonResult)
+//    }
     
     
-    func startConnection(){
-        let urlPath: String = "http://www.bike-1-1.com/phones.json"
-        var url: NSURL = NSURL(string: urlPath)
-        var request: NSURLRequest = NSURLRequest(URL: url)
-        var connection: NSURLConnection = NSURLConnection(request: request, delegate: self, startImmediately: false)
-        connection.start()
-    }
-    
-    func connection(connection: NSURLConnection!, didReceiveData data: NSData!){
-        self.data.appendData(data)
-    }
-    
-    //        func btnLoad_Click(sender: UIButton){
-    //            startConnection()
-    //        }
-    
-    func connectionDidFinishLoading(connection: NSURLConnection!) {
-        var err: NSError
-        // throwing an error on the line below (can't figure out where the error message is)
-        var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
-        println("json results")
-        println(jsonResult)
-    }
     
     
     func locationManager(manager:CLLocationManager!, didUpdateLocations locations:AnyObject[]){
@@ -77,8 +81,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         var user_long = locations[0].coordinate.longitude
         var user_lat = locations[0].coordinate.latitude
         
-        var latDelta:CLLocationDegrees = 0.05
-        var longDelta:CLLocationDegrees = 0.05
+        var latDelta:CLLocationDegrees = 0.5
+        var longDelta:CLLocationDegrees = 0.5
         
         var span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
         var user_location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(user_lat, user_long)
@@ -92,7 +96,55 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         user_location_annotation.coordinate = user_location
         user_location_annotation.title = "You are here"
         
-        self.mapView.addAnnotation(user_location_annotation)
+        
+        
+        let urlPath: String = "http://localhost:3000/phones.json"
+        
+
+        func getJSON(urlToRequest: String) -> NSData{
+            return NSData(contentsOfURL: NSURL(string:urlToRequest))
+            
+        }
+        
+        func parseJSON(inputData: NSData) -> NSMutableArray{
+            var error: NSError?
+            var boardsDictionary: NSMutableArray = NSJSONSerialization.JSONObjectWithData(inputData, options: NSJSONReadingOptions.MutableContainers, error: &error) as NSMutableArray
+            
+            return boardsDictionary
+        }
+        
+        var rawJSON = getJSON(urlPath)
+        
+        var parsedJSON = parseJSON(rawJSON)
+        
+        
+        while count <= 0 {
+            for jsonObject in parsedJSON {
+                
+                var thisObj = jsonObject as NSDictionary
+                var marker_latitude = thisObj["latitude"] as Double
+                var marker_longitude = thisObj["longitude"] as Double
+                var request = thisObj["request_text"] as String
+                
+                var new_location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(marker_latitude, marker_longitude)
+                var new_annotation = MKPointAnnotation()
+       
+                new_annotation.coordinate = new_location
+                new_annotation.title = request
+                
+                self.mapView.addAnnotation(new_annotation)
+                self.mapView.addAnnotation(user_location_annotation)
+                
+                count = count + 1
+            }
+        }
+        
+//        var last = parsedJSON[5] as NSDictionary
+//        
+//        println(last["request_text"])
+        
+        
+        
         
     }
     
