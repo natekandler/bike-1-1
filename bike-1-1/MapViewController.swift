@@ -26,50 +26,11 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
-    
-        
+
     }
-    
-//    @lazy var data = NSMutableData()
-//    
-//    override func viewWillAppear(animated: Bool) {
-//        super.viewWillAppear(animated)
-//        startConnection()
-//    }
-    
-    
-//    func startConnection(){
-//        let urlPath: String = "http://www.bike-1-1.com/phones.json"
-//        var url: NSURL = NSURL(string: urlPath)
-//        var request: NSURLRequest = NSURLRequest(URL: url)
-//        var connection: NSURLConnection = NSURLConnection(request: request, delegate: self, startImmediately: false)
-//        connection.start()
-//    }
-//    
-//    func connection(connection: NSURLConnection!, didReceiveData data: NSData!){
-//        self.data.appendData(data)
-//        
-//    }
-//    
-//    //        func btnLoad_Click(sender: UIButton){
-//    //            startConnection()
-//    //        }
-//    
-//    func connectionDidFinishLoading(connection: NSURLConnection!) {
-//        var err: NSError
-//        
-//        var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
-//        println("json results")
-//        println(jsonResult)
-//    }
-    
-    
     
     
     func locationManager(manager:CLLocationManager!, didUpdateLocations locations:AnyObject[]){
-//        println(locations[0].coordinate.latitude)
-//        println(locations[0].coordinate.longitude)
-        
         
         var addMapView = AddToMapViewController()
         addMapView.get_latitude(locations[0].coordinate.latitude)
@@ -118,33 +79,25 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         var parsedJSON = parseJSON(rawJSON)
         
         
-        while count <= 0 {
-            for jsonObject in parsedJSON {
-                
-                var thisObj = jsonObject as NSDictionary
-                var marker_latitude = thisObj["latitude"] as Double
-                var marker_longitude = thisObj["longitude"] as Double
-                var request = thisObj["request_text"] as String
-                
-                var new_location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(marker_latitude, marker_longitude)
-                var new_annotation = MKPointAnnotation()
-       
-                new_annotation.coordinate = new_location
-                new_annotation.title = request
-                
-                self.mapView.addAnnotation(new_annotation)
-                self.mapView.addAnnotation(user_location_annotation)
-                
-                count = count + 1
-            }
+        
+        for jsonObject in parsedJSON {
+            
+            var thisObj = jsonObject as NSDictionary
+            var marker_latitude = thisObj["latitude"] as Double
+            var marker_longitude = thisObj["longitude"] as Double
+            var request = thisObj["request_text"] as String
+            
+            var new_location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(marker_latitude, marker_longitude)
+            var new_annotation = MKPointAnnotation()
+   
+            new_annotation.coordinate = new_location
+            new_annotation.title = request
+            
+            self.mapView.addAnnotation(new_annotation)
+            self.mapView.addAnnotation(user_location_annotation)
+            
+            count = count + 1
         }
-        
-//        var last = parsedJSON[5] as NSDictionary
-//        
-//        println(last["request_text"])
-        
-        
-        
         
     }
     
