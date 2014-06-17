@@ -14,11 +14,15 @@ import CoreGraphics
 
 
 
-class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+@objc(MapViewController)  class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     @IBOutlet var mapView : MKMapView
     let locationManager = CLLocationManager()
     var current_parsed = []
+    
+    @IBAction func undwindToMapViewController(s:UIStoryboardSegue){
+        println("Hello world")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,19 +51,17 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         var region:MKCoordinateRegion = MKCoordinateRegionMake(user_location, span)
         
         self.mapView.setRegion(region, animated: true)
+        
+        get_markers()
     
-//        
-//        var user_location_annotation = MKPointAnnotation()
-//        
-//        user_location_annotation.coordinate = user_location
-//        user_location_annotation.title = "You are here"
+        
+    }
+    
+    func get_markers() {
+        
+        let urlPath: String = "http://localhost:3000/phones.json"
         
         
-        
-//        let urlPath: String = "http://www.bike-1-1.com/phones.json"
-         let urlPath: String = "http://localhost:3000/phones.json"
-        
-
         func getJSON(urlToRequest: String) -> NSData{
             return NSData(contentsOfURL: NSURL(string:urlToRequest))
             
@@ -78,7 +80,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         if current_parsed != parsedJSON {
             current_parsed = parsedJSON
-        
+            
             for jsonObject in parsedJSON {
                 var thisObj = jsonObject as NSDictionary
                 if (thisObj["latitude"] != nil && thisObj["longitude"] != nil) {
@@ -88,7 +90,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                     
                     var annotationView : MKAnnotationView = MKAnnotationView()
                     
-                
+                    
                     var new_location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(marker_latitude, marker_longitude)
                     var new_annotation = MKPointAnnotation()
                     
@@ -97,19 +99,28 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                     new_annotation.subtitle = "Help this user!"
                     
                     self.mapView.addAnnotation(new_annotation)
-//                    self.mapView.addAnnotation(user_location_annotation)
+                    //                    self.mapView.addAnnotation(user_location_annotation)
                 }
-
+                
             }
         }
-       
-        
-        
-        
     }
     
     func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!){
         println("Failed to update")
+        get_markers()
+        
+        var user_lat = 41.889790
+        var user_long = -87.639205
+        
+        var latDelta:CLLocationDegrees = 0.05
+        var longDelta:CLLocationDegrees = 0.05
+        
+        var span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
+        var user_location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(user_lat, user_long)
+        var region:MKCoordinateRegion = MKCoordinateRegionMake(user_location, span)
+        
+        self.mapView.setRegion(region, animated: true)
     }
     
     

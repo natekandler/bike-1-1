@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0967C97E1950BCFF00353D1A /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0967C97D1950BCFF00353D1A /* LoginController.swift */; };
 		096A6A27194D059F0091860D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096A6A26194D059F0091860D /* AppDelegate.swift */; };
 		096A6A29194D059F0091860D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096A6A28194D059F0091860D /* MapViewController.swift */; };
 		096A6A2C194D059F0091860D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 096A6A2A194D059F0091860D /* Main.storyboard */; };
@@ -30,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0967C97D1950BCFF00353D1A /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		0967C9811950DAE800353D1A /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		096A6A21194D059F0091860D /* bike-1-1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bike-1-1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		096A6A25194D059F0091860D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		096A6A26194D059F0091860D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,7 +98,9 @@
 				096A6A26194D059F0091860D /* AppDelegate.swift */,
 				096A6A28194D059F0091860D /* MapViewController.swift */,
 				096A6A2A194D059F0091860D /* Main.storyboard */,
+				0967C97D1950BCFF00353D1A /* LoginController.swift */,
 				096A6A43194D065B0091860D /* AddToMapViewController.swift */,
+				0967C9811950DAE800353D1A /* MapViewController.h */,
 				096A6A2D194D059F0091860D /* Images.xcassets */,
 				096A6A24194D059F0091860D /* Supporting Files */,
 			);
@@ -229,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				096A6A44194D065B0091860D /* AddToMapViewController.swift in Sources */,
+				0967C97E1950BCFF00353D1A /* LoginController.swift in Sources */,
 				096A6A29194D059F0091860D /* MapViewController.swift in Sources */,
 				096A6A27194D059F0091860D /* AppDelegate.swift in Sources */,
 			);

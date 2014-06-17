@@ -1,13 +1,94 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="W1D-a9-pdI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lNb-og-PLg">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
     </dependencies>
     <scenes>
+        <!--Login Controller-->
+        <scene sceneID="oyM-zT-Agx">
+            <objects>
+                <viewController id="lNb-og-PLg" customClass="LoginController" customModule="bike_1_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FFP-ub-0RH"/>
+                        <viewControllerLayoutGuide type="bottom" id="pLu-Jl-oOl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PDe-24-9qL">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qUf-VJ-RnW">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="69" y="107" width="183" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u7D-Ud-Nee">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="69" y="174" width="183" height="30"/>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6h-KF-QgQ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="125" y="264" width="71" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="loginButton:" destination="lNb-og-PLg" eventType="touchUpInside" id="Nyq-p6-CBL"/>
+                                    <segue destination="vXZ-lx-hvc" kind="modal" id="AAc-ON-2Sk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AcJ-d5-4b4">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="139" y="220" width="0.0" height="0.0"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="qUf-VJ-RnW"/>
+                                <exclude reference="u7D-Ud-Nee"/>
+                                <exclude reference="n6h-KF-QgQ"/>
+                                <exclude reference="AcJ-d5-4b4"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="qUf-VJ-RnW"/>
+                                <include reference="u7D-Ud-Nee"/>
+                                <include reference="n6h-KF-QgQ"/>
+                                <include reference="AcJ-d5-4b4"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="MYz-xs-vYM"/>
+                    <connections>
+                        <outlet property="emailField" destination="qUf-VJ-RnW" id="ZB0-3R-JRa"/>
+                        <outlet property="loginLabel" destination="AcJ-d5-4b4" id="CnF-QC-MMn"/>
+                        <outlet property="passwordField" destination="u7D-Ud-Nee" id="hyT-8V-Oud"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iQE-kf-Mas" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="565.5" y="-1511"/>
+        </scene>
         <!--Map View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="MapViewController" customModule="bike_1_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="MapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -19,23 +100,38 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KJo-PZ-auQ">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="35" width="320" height="480"/>
+                                    <rect key="frame" x="0.0" y="76" width="320" height="442"/>
                                 </variation>
                                 <connections>
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="wce-eG-q8C"/>
                                 </connections>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ob5-jk-dq5">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Send Help Request">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="142" y="30" width="185" height="48"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="4Fi-tN-kEQ" kind="modal" id="kNw-ev-b1j"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="KJo-PZ-auQ"/>
+                                <exclude reference="Ob5-jk-dq5"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="KJo-PZ-auQ"/>
+                                <include reference="Ob5-jk-dq5"/>
                             </mask>
                         </variation>
                     </view>
@@ -43,7 +139,6 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="5t2-Gh-Snf">
                             <connections>
                                 <action selector="addRequestButton:" destination="vXZ-lx-hvc" id="2nd-HS-OlH"/>
-                                <segue destination="4Fi-tN-kEQ" kind="push" id="Y7I-jL-dPJ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -53,7 +148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="555" y="-751"/>
+            <point key="canvasLocation" x="1212" y="-1511"/>
         </scene>
         <!--Add To Map View Controller - Add a Help Request-->
         <scene sceneID="TLH-DG-MjD">
@@ -81,11 +176,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="157" width="280" height="30"/>
+                                    <rect key="frame" x="20" y="159" width="280" height="37"/>
                                 </variation>
                                 <connections>
                                     <action selector="doneButton:" destination="4Fi-tN-kEQ" eventType="touchUpInside" id="rFJ-Qs-ub7"/>
-                                    <segue destination="W1D-a9-pdI" kind="modal" id="uTs-L0-JS0"/>
+                                    <segue destination="vXZ-lx-hvc" kind="modal" id="LVP-uc-URh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -111,25 +206,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jju-4g-F68" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-79.5" y="-146"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="4M6-f4-MDm">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="W1D-a9-pdI" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="E8E-KV-w3C">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="UEN-XH-wKJ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YL6-VD-h9P" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-79.5" y="-751"/>
+            <point key="canvasLocation" x="2277" y="-1885"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="AAc-ON-2Sk"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -34,8 +34,16 @@ class AddToMapViewController: UIViewController, CLLocationManagerDelegate, MKMap
     @IBAction func doneButton(sender : AnyObject) {
         
         
-//        var url = NSURL(string:"http://www.bike-1-1.com/events/")
-        var url = NSURL(string:"http://localhost:3000/events/")
+//        var url = NSURL(string:"http://www.bike-1-1.com/phones/")
+        var url = NSURL(string:"http://localhost:3000/phones/")
+        
+        if user_latitude == 0.00{
+            user_latitude = 41.889790
+        }
+        
+        if user_longitude == 0.00 {
+            user_longitude = -87.637205
+        }
 
         
         var request = NSMutableURLRequest(URL: url)
@@ -51,8 +59,12 @@ class AddToMapViewController: UIViewController, CLLocationManagerDelegate, MKMap
         println("sending request...")
         
         connection.start()
+
         
     }
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
