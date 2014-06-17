@@ -92,8 +92,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                     var new_location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(marker_latitude, marker_longitude)
                     var new_annotation = MKPointAnnotation()
                     
-                    
-                    var image : UIImage
                     new_annotation.coordinate = new_location
                     new_annotation.title = request
                     new_annotation.subtitle = "Help this user!"
