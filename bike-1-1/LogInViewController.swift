@@ -22,7 +22,7 @@ class LogInViewController: UIViewController {
         }
         
         else {
-        
+            self.performSegueWithIdentifier("toMapView", sender: self)
             
             loginLabel.text = "email or password is incorrect"
             loginLabel.textColor = UIColor.redColor()
