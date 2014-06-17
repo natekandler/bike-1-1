@@ -18,11 +18,10 @@ class LogInViewController: UIViewController {
     
     @IBAction func loginButton(sender : AnyObject) {
         if emailField.text == "natekandler@gmail.com" && passwordField.text == "password" {
-            self.performSegueWithIdentifier("push", sender: self)
+            self.performSegueWithIdentifier("toMapView", sender: self)
         }
         
         else {
-            override func prepareForSegue(segue: LogInViewController, sender: AnyObject) {}
             
             loginLabel.text = "email or password is incorrect"
             loginLabel.textColor = UIColor.redColor()
