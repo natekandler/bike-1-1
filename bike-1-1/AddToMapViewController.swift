@@ -8,13 +8,29 @@
 
 import UIKit
 import CoreLocation
+import MapKit
 
-class AddToMapViewController: UIViewController, CLLocationManagerDelegate {
+class AddToMapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
-
+    @IBOutlet var mapView : MKMapView
 
     @IBOutlet var descriptionField : UITextField
     let locationManager = CLLocationManager()
+    
+    var user_latitude = 0.00
+    var user_longitude = 0.00
+    var once = 1
+    
+    func locationManager(manager:CLLocationManager!, didUpdateLocations locations:AnyObject[]){
+        if once == 1 {
+            user_longitude = locations[0].coordinate.longitude
+            user_latitude = locations[0].coordinate.latitude
+            println("IN LM \(user_latitude)")
+        }
+        once += 1
+    }
+    
+    
     @IBAction func doneButton(sender : AnyObject) {
         
         
@@ -23,8 +39,8 @@ class AddToMapViewController: UIViewController, CLLocationManagerDelegate {
 
         
         var request = NSMutableURLRequest(URL: url)
-        
-        let string = NSString(format: "required_text=\(descriptionField)&latitude=42.4654634&longitude=105.342")
+        println(user_latitude)
+        let string = NSString(format: "required_text=\(descriptionField)&latitude=\(user_latitude)&longitude=\(user_longitude)")
         let data = string.dataUsingEncoding(NSUTF8StringEncoding)
         
         request.HTTPMethod = "POST"
@@ -40,8 +56,13 @@ class AddToMapViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
+        locationManager.startUpdatingLocation()
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

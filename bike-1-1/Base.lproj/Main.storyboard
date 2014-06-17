@@ -53,9 +53,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="34" y="-613"/>
+            <point key="canvasLocation" x="555" y="-751"/>
         </scene>
-        <!--Add To Map View Controller-->
+        <!--Add To Map View Controller - Add a Help Request-->
         <scene sceneID="TLH-DG-MjD">
             <objects>
                 <viewController id="4Fi-tN-kEQ" customClass="AddToMapViewController" customModule="bike_1_1" customModuleProvider="target" sceneMemberID="viewController">
@@ -103,7 +103,7 @@
                         </variation>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="hFG-Gb-2yf"/>
+                    <navigationItem key="navigationItem" title="Add a Help Request" id="hFG-Gb-2yf"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="descriptionField" destination="xdq-ab-xnl" id="9gZ-SV-YB6"/>
@@ -111,7 +111,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jju-4g-F68" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="33" y="115"/>
+            <point key="canvasLocation" x="-79.5" y="-146"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4M6-f4-MDm">
@@ -129,7 +129,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YL6-VD-h9P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-550" y="-613"/>
+            <point key="canvasLocation" x="-79.5" y="-751"/>
         </scene>
     </scenes>
 </document>
