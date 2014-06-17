@@ -18,7 +18,10 @@ class AddToMapViewController: UIViewController, CLLocationManagerDelegate {
     @IBAction func doneButton(sender : AnyObject) {
         
         
+//        var url = NSURL(string:"http://www.bike-1-1.com/events/")
         var url = NSURL(string:"http://localhost:3000/events/")
+
+        
         var request = NSMutableURLRequest(URL: url)
         
         let string = NSString(format: "required_text=\(descriptionField)&latitude=42.4654634&longitude=105.342")
@@ -35,24 +38,11 @@ class AddToMapViewController: UIViewController, CLLocationManagerDelegate {
         
     }
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestAlwaysAuthorization()
-        locationManager.startUpdatingLocation()
-        
-        
 
         // Do any additional setup after loading the view.
     }
-    
-   
-    
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

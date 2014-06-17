@@ -53,7 +53,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-37.5" y="-10"/>
+            <point key="canvasLocation" x="34" y="-613"/>
         </scene>
         <!--Add To Map View Controller-->
         <scene sceneID="TLH-DG-MjD">
@@ -72,9 +72,22 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="87" width="280" height="30"/>
+                                    <rect key="frame" x="20" y="108" width="280" height="30"/>
                                 </variation>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vow-jv-Ttx">
+                                <rect key="frame" x="20" y="201" width="440" height="30"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="157" width="280" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="doneButton:" destination="4Fi-tN-kEQ" eventType="touchUpInside" id="rFJ-Qs-ub7"/>
+                                    <segue destination="W1D-a9-pdI" kind="modal" id="uTs-L0-JS0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -89,20 +102,16 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="hFG-Gb-2yf">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="02d-Uu-aFi">
-                            <connections>
-                                <action selector="doneButton:" destination="4Fi-tN-kEQ" id="ohm-dZ-Dwn"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="hFG-Gb-2yf"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="descriptionField" destination="xdq-ab-xnl" id="9gZ-SV-YB6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jju-4g-F68" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="40" y="-83"/>
+            <point key="canvasLocation" x="33" y="115"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4M6-f4-MDm">
@@ -120,7 +129,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YL6-VD-h9P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-355.5" y="-83"/>
+            <point key="canvasLocation" x="-550" y="-613"/>
         </scene>
     </scenes>
 </document>
