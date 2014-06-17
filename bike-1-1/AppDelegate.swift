@@ -46,3 +46,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+//- (MKAnnotationView *)mapView:(MKMapView *)mV viewForAnnotation:(id <MKAnnotation>)annotation{
+//    
+//    MKAnnotationView *view = nil;
+//    //MKPinAnnotationView *view=[[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"HotSpotsLoc"];
+//    
+//    if(annotation !=mapView.userLocation){
+//        view = (MKAnnotationView *)
+//        [mapView dequeueReusableAnnotationViewWithIdentifier:@"identifier"];
+//        if(nil == view) {
+//            view = [[[MKAnnotationView alloc]
+//                initWithAnnotation:annotation reuseIdentifier:@"identifier"]
+//            autorelease];
+//        }
+//        
+//        
+//        ParkPlaceMark *currPlaceMark = annotation;
+//        NSLog(@"%i",currPlaceMark.position);
+//        
+//        view.image = [UIImage imageNamed:@"pin.png"];
+//        
+//        UIButton *btnViewVenue = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+//        view.rightCalloutAccessoryView=btnViewVenue;
+//        view.enabled = YES;
+//        view.canShowCallout = YES;
+//        view.multipleTouchEnabled = NO;
+//        //view.animatesDrop = YES;
+//        
+//    }       
+//    return view;
+//}
+

@@ -10,6 +10,7 @@ import UIKit
 import Foundation
 import MapKit
 import CoreLocation
+import CoreGraphics
 
 
 
@@ -47,15 +48,16 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         self.mapView.setRegion(region, animated: true)
     
+//        
+//        var user_location_annotation = MKPointAnnotation()
+//        
+//        user_location_annotation.coordinate = user_location
+//        user_location_annotation.title = "You are here"
         
-        var user_location_annotation = MKPointAnnotation()
-        
-        user_location_annotation.coordinate = user_location
-        user_location_annotation.title = "You are here"
         
         
-        
-        let urlPath: String = "http://localhost:3000/phones.json"
+//        let urlPath: String = "http://www.bike-1-1.com/phones.json"
+         let urlPath: String = "http://localhost:3000/phones.json"
         
 
         func getJSON(urlToRequest: String) -> NSData{
@@ -78,20 +80,27 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             current_parsed = parsedJSON
         
             for jsonObject in parsedJSON {
-                
                 var thisObj = jsonObject as NSDictionary
-                var marker_latitude = thisObj["latitude"] as Double
-                var marker_longitude = thisObj["longitude"] as Double
-                var request = thisObj["request_text"] as String
+                if (thisObj["latitude"] != nil && thisObj["longitude"] != nil) {
+                    var marker_latitude = thisObj["latitude"] as Double
+                    var marker_longitude = thisObj["longitude"] as Double
+                    var request = thisObj["request_text"] as String
+                    
+                    var annotationView : MKAnnotationView = MKAnnotationView()
+                    
                 
-                var new_location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(marker_latitude, marker_longitude)
-                var new_annotation = MKPointAnnotation()
-                
-                new_annotation.coordinate = new_location
-                new_annotation.title = request
-                
-                self.mapView.addAnnotation(new_annotation)
-                self.mapView.addAnnotation(user_location_annotation)
+                    var new_location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(marker_latitude, marker_longitude)
+                    var new_annotation = MKPointAnnotation()
+                    
+                    
+                    var image : UIImage
+                    new_annotation.coordinate = new_location
+                    new_annotation.title = request
+                    new_annotation.subtitle = "Help this user!"
+                    
+                    self.mapView.addAnnotation(new_annotation)
+//                    self.mapView.addAnnotation(user_location_annotation)
+                }
 
             }
         }

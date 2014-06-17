@@ -16,6 +16,7 @@
 		096A6A46194D09880091860D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096A6A45194D09880091860D /* MapKit.framework */; };
 		096A6A48194D098E0091860D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096A6A47194D098E0091860D /* CoreLocation.framework */; };
 		096A6A4A194D12370091860D /* dbc.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 096A6A49194D12370091860D /* dbc.gpx */; };
+		096A6A55194FBA390091860D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096A6A54194FBA390091860D /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		096A6A45194D09880091860D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		096A6A47194D098E0091860D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		096A6A49194D12370091860D /* dbc.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dbc.gpx; sourceTree = "<group>"; };
+		096A6A54194FBA390091860D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				096A6A55194FBA390091860D /* CoreGraphics.framework in Frameworks */,
 				096A6A48194D098E0091860D /* CoreLocation.framework in Frameworks */,
 				096A6A46194D09880091860D /* MapKit.framework in Frameworks */,
 			);
@@ -67,6 +70,7 @@
 		096A6A18194D059F0091860D = {
 			isa = PBXGroup;
 			children = (
+				096A6A54194FBA390091860D /* CoreGraphics.framework */,
 				096A6A49194D12370091860D /* dbc.gpx */,
 				096A6A47194D098E0091860D /* CoreLocation.framework */,
 				096A6A45194D09880091860D /* MapKit.framework */,
