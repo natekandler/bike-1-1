@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0907A73819524E4D0049DE03 /* EpP6YvQ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0907A73719524E4D0049DE03 /* EpP6YvQ.jpg */; };
+		093F7CBB1953403B00B2ED7D /* stars.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 093F7CBA1953403B00B2ED7D /* stars.jpg */; };
+		093F7CBF19535F6F00B2ED7D /* login_button1.png in Resources */ = {isa = PBXBuildFile; fileRef = 093F7CBE19535F6F00B2ED7D /* login_button1.png */; };
 		0967C97E1950BCFF00353D1A /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0967C97D1950BCFF00353D1A /* LoginController.swift */; };
 		096A6A27194D059F0091860D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096A6A26194D059F0091860D /* AppDelegate.swift */; };
 		096A6A29194D059F0091860D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096A6A28194D059F0091860D /* MapViewController.swift */; };
@@ -33,6 +35,8 @@
 
 /* Begin PBXFileReference section */
 		0907A73719524E4D0049DE03 /* EpP6YvQ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = EpP6YvQ.jpg; sourceTree = "<group>"; };
+		093F7CBA1953403B00B2ED7D /* stars.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stars.jpg; sourceTree = "<group>"; };
+		093F7CBE19535F6F00B2ED7D /* login_button1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_button1.png; sourceTree = "<group>"; };
 		0967C97D1950BCFF00353D1A /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		096A6A21194D059F0091860D /* bike-1-1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bike-1-1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		096A6A25194D059F0091860D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -110,7 +114,9 @@
 		096A6A24194D059F0091860D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				093F7CBE19535F6F00B2ED7D /* login_button1.png */,
 				0907A73719524E4D0049DE03 /* EpP6YvQ.jpg */,
+				093F7CBA1953403B00B2ED7D /* stars.jpg */,
 				096A6A25194D059F0091860D /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -217,7 +223,9 @@
 				096A6A4A194D12370091860D /* dbc.gpx in Resources */,
 				0907A73819524E4D0049DE03 /* EpP6YvQ.jpg in Resources */,
 				096A6A2C194D059F0091860D /* Main.storyboard in Resources */,
+				093F7CBF19535F6F00B2ED7D /* login_button1.png in Resources */,
 				096A6A2E194D059F0091860D /* Images.xcassets in Resources */,
+				093F7CBB1953403B00B2ED7D /* stars.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

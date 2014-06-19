@@ -19,7 +19,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EpP6YvQ.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fwf-Pp-ceZ">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="566"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="578"/>
                                 </variation>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u7D-Ud-Nee">
@@ -30,26 +30,6 @@
                                     <rect key="frame" x="69" y="225" width="183" height="30"/>
                                 </variation>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_button" translatesAutoresizingMaskIntoConstraints="NO" id="99z-cb-CJ9">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="113" y="258" width="94" height="40"/>
-                                </variation>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6h-KF-QgQ">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="113" y="258" width="94" height="40"/>
-                                </variation>
-                                <connections>
-                                    <action selector="loginButton:" destination="lNb-og-PLg" eventType="touchUpInside" id="Nyq-p6-CBL"/>
-                                    <segue destination="vXZ-lx-hvc" kind="modal" id="AAc-ON-2Sk"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AcJ-d5-4b4">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -59,6 +39,20 @@
                                     <rect key="frame" x="139" y="220" width="0.0" height="0.0"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6h-KF-QgQ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" backgroundImage="login_button1.png">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="113" y="263" width="94" height="40"/>
+                                </variation>
+                                <connections>
+                                    <action selector="loginButton:" destination="lNb-og-PLg" eventType="touchUpInside" id="Nyq-p6-CBL"/>
+                                    <segue destination="vXZ-lx-hvc" kind="modal" id="AAc-ON-2Sk"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qUf-VJ-RnW">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -74,9 +68,8 @@
                             <mask key="subviews">
                                 <exclude reference="fwf-Pp-ceZ"/>
                                 <exclude reference="u7D-Ud-Nee"/>
-                                <exclude reference="99z-cb-CJ9"/>
-                                <exclude reference="n6h-KF-QgQ"/>
                                 <exclude reference="AcJ-d5-4b4"/>
+                                <exclude reference="n6h-KF-QgQ"/>
                                 <exclude reference="qUf-VJ-RnW"/>
                             </mask>
                         </variation>
@@ -84,9 +77,8 @@
                             <mask key="subviews">
                                 <include reference="fwf-Pp-ceZ"/>
                                 <include reference="u7D-Ud-Nee"/>
-                                <include reference="99z-cb-CJ9"/>
-                                <include reference="n6h-KF-QgQ"/>
                                 <include reference="AcJ-d5-4b4"/>
+                                <include reference="n6h-KF-QgQ"/>
                                 <include reference="qUf-VJ-RnW"/>
                             </mask>
                         </variation>
@@ -199,6 +191,19 @@
                                     <rect key="frame" x="20" y="214" width="280" height="30"/>
                                 </variation>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vow-jv-Ttx">
+                                <rect key="frame" x="20" y="201" width="440" height="30"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="240" y="264" width="60" height="27"/>
+                                </variation>
+                                <connections>
+                                    <action selector="doneButton:" destination="4Fi-tN-kEQ" eventType="touchUpInside" id="rFJ-Qs-ub7"/>
+                                    <segue destination="vXZ-lx-hvc" kind="modal" id="LVP-uc-URh"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zH1-Me-Kfl">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Cancel">
@@ -226,19 +231,12 @@
                                     <rect key="frame" x="67" y="185" width="186" height="21"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vow-jv-Ttx">
-                                <rect key="frame" x="20" y="201" width="440" height="30"/>
-                                <state key="normal" title="Submit">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stars.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Fc8-U8-3cf">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="240" y="264" width="60" height="27"/>
+                                    <rect key="frame" x="0.0" y="333" width="320" height="64"/>
                                 </variation>
-                                <connections>
-                                    <action selector="doneButton:" destination="4Fi-tN-kEQ" eventType="touchUpInside" id="rFJ-Qs-ub7"/>
-                                    <segue destination="vXZ-lx-hvc" kind="modal" id="LVP-uc-URh"/>
-                                </connections>
-                            </button>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -248,6 +246,7 @@
                                 <exclude reference="zH1-Me-Kfl"/>
                                 <exclude reference="fMb-wd-IHC"/>
                                 <exclude reference="i2G-rb-c2I"/>
+                                <exclude reference="Fc8-U8-3cf"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -256,6 +255,7 @@
                                 <include reference="zH1-Me-Kfl"/>
                                 <include reference="fMb-wd-IHC"/>
                                 <include reference="i2G-rb-c2I"/>
+                                <include reference="Fc8-U8-3cf"/>
                             </mask>
                         </variation>
                     </view>
@@ -275,9 +275,10 @@
         <image name="63RZPUm" width="636" height="634"/>
         <image name="EpP6YvQ.jpg" width="640" height="1136"/>
         <image name="ibkw3INZl6zt1B" width="884" height="878"/>
-        <image name="login_button" width="218" height="80"/>
+        <image name="login_button1.png" width="218" height="80"/>
+        <image name="stars.jpg" width="640" height="127"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="b0S-Jg-tcf"/>
+        <segue reference="AAc-ON-2Sk"/>
     </inferredMetricsTieBreakers>
 </document>
