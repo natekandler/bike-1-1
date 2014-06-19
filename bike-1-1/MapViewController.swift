@@ -14,15 +14,13 @@ import CoreGraphics
 
 
 
-@objc(MapViewController)  class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
+
     @IBOutlet var mapView : MKMapView
     let locationManager = CLLocationManager()
     var current_parsed = []
     
-    @IBAction func undwindToMapViewController(s:UIStoryboardSegue){
-        println("Hello world")
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +58,7 @@ import CoreGraphics
     func get_markers() {
         
         let urlPath: String = "http://localhost:3000/phones.json"
+//        let urlPath: String = "http://www.bike-1-1.com/phones.json"
         
         
         func getJSON(urlToRequest: String) -> NSData{
@@ -70,7 +69,7 @@ import CoreGraphics
         func parseJSON(inputData: NSData) -> NSMutableArray{
             var error: NSError?
             var boardsDictionary: NSMutableArray = NSJSONSerialization.JSONObjectWithData(inputData, options: NSJSONReadingOptions.MutableContainers, error: &error) as NSMutableArray
-            
+           
             return boardsDictionary
         }
         
