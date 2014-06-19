@@ -1,12 +1,26 @@
 Bike-1-1 web app repo: ![https://github.com/ieatkimchi/Bike-1-1](https://github.com/ieatkimchi/Bike-1-1)
 
 ========
+###Team
 
-<strong>Bike-1-1</strong>
-<ul>
-<li> <a href="https://github.com/paigecrum"> Paige Crum </a> </li>
-<li> <a href="https://github.com/jmdaugherty"> Jared Daugherty </a> </li>
-<li> <a href="https://github.com/natekandler"> Nate Kandler </a> </li>
-<li> <a href="https://github.com/nullet"> Tom Nullet </a> </li>
-<li> <a href="https://github.com/ieatkimchi"> Robb Tvorik </a> </li>
-</ul>
+  * [Paige Crum](https://github.com/paigecrum)
+  * [Jared Daugherty](https://github.com/jmdaugherty)
+  * [Nate Kandler](https://github.com/natekandler)
+  * [Tom Nullet](https://github.com/nullet)
+  * [Robb Tvorik ](https://github.com/ieatkimchi)
+
+****
+
+Bike-1-1 connects bicyclists in need to bicylists with tools. Users send out help requests on their mobile device and recieve responses by users and bike shops in their area. Users can also quickly view nearby bike shops and bike routes. 
+
+
+****
+
+###Tech
+
+ * Ruby on Rails
+ * Swift
+ * Heroku
+ * Google Maps & Places API
+ * MapKit and CoreLocation frameworks
+ * Websockets
