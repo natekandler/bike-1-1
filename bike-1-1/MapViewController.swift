@@ -57,8 +57,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     func get_markers() {
         
-        let urlPath: String = "http://localhost:3000/phones.json"
-//        let urlPath: String = "http://www.bike-1-1.com/phones.json"
+//        let urlPath: String = "http://localhost:3000/phones.json"
+        let urlPath: String = "http://www.bike-1-1.com/phones.json"
         
         
         func getJSON(urlToRequest: String) -> NSData{

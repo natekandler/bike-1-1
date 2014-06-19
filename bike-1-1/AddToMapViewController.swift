@@ -34,8 +34,8 @@ class AddToMapViewController: UIViewController, CLLocationManagerDelegate, MKMap
     @IBAction func doneButton(sender : AnyObject) {
         
         
-        var url = NSURL(string:"http://localhost:3000/phones/")
-//        var url = NSURL(string:"http://localhost:3000/events/")
+        var url = NSURL(string:"http://www.bike-1-1.com/phones/")
+//        var url = NSURL(string:"http://localhost:3000/phones/")
         
         if user_latitude == 0.00{
             user_latitude = 41.889790

@@ -30,7 +30,9 @@ class LoginController: UIViewController, NSURLConnectionDelegate, NSURLConnectio
     }
     
     func post_user_details() {
-        var url = NSURL(string:"http://localhost:3000/phones/login")
+//        var url = NSURL(string:"http://localhost:3000/phones/login")
+        var url = NSURL(string:"http://www.bike-1-1.com/phones/login")
+
         
         var request = NSMutableURLRequest(URL: url)
         
@@ -80,7 +82,7 @@ class LoginController: UIViewController, NSURLConnectionDelegate, NSURLConnectio
         
         if auth_token == "Unauthorized"{
             println("break")
-            self.performSegueWithIdentifier("login", sender: self)
+//            self.performSegueWithIdentifier("login", sender: self)
         }
         
         NSUserDefaults.standardUserDefaults().setObject(auth_token, forKey: "auth_token")
@@ -88,11 +90,11 @@ class LoginController: UIViewController, NSURLConnectionDelegate, NSURLConnectio
 //        println(test)
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!){
-        if segue.identifier == "login" {
-            
-        }
-    }
+//    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!){
+//        if segue.identifier == "login" {
+//            
+//        }
+//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
