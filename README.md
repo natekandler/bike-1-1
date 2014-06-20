@@ -1,6 +1,6 @@
 ##[Bike-1-1](http://www.bike-1-1.com/login)
 
-#####Bike-1-1 web app repo: ![https://github.com/ieatkimchi/Bike-1-1](https://github.com/ieatkimchi/Bike-1-1)
+#####Bike-1-1 web app repo: [https://github.com/ieatkimchi/Bike-1-1](https://github.com/ieatkimchi/Bike-1-1)
 ========
 ###Team
 
