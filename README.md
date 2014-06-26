@@ -3,10 +3,13 @@
 #####Bike-1-1 web app repo: [https://github.com/jmdaugherty/Bike-1-1-DBC-Final-Project](https://github.com/jmdaugherty/Bike-1-1-DBC-Final-Project)
 ========
 ###Team
+####Mobile
+ * [Jared Daugherty](https://github.com/jmdaugherty)
+ * [Nate Kandler](https://github.com/natekandler)
+ 
 
+####Web
   * [Paige Crum](https://github.com/paigecrum)
-  * [Jared Daugherty](https://github.com/jmdaugherty)
-  * [Nate Kandler](https://github.com/natekandler)
   * [Tom Nullet](https://github.com/nullet)
   * [Robb Tvorik ](https://github.com/ieatkimchi)
 
